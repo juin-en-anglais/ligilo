@@ -3,10 +3,10 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
-        <title>{{ config.title }}</title>
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <title>{{ section.title }} | {{ config.title }}</title>
+        <link rel="icon" href="img/{{ config.extra.avatar }}" type="image/x-icon">
         <link rel="stylesheet" href="{{ config.extra.style }}">
-        <meta property="og:title" content="{{ config.title }}">
+        <meta property="og:title" content="{{ section.title }} | {{ config.title }}">
         <meta property="og:type" content="website">
         <meta property="og:image" content="{{ config.base_url }}/img/{{ config.extra.avatar }}">
         <meta property="og:description" content="{{ config.description }}">
@@ -38,7 +38,7 @@
         {% endblock toc %}
         
         <footer>
-            Powered by <a href="https://getzola.org" target="_blank">Zola</a> / <a href="https://github.com/june-coloc/linkRepo" target="_blank">linkRepo</a>
+            Powered by <a href="https://getzola.org" target="_blank">Zola</a> / <a href="https://github.com/june-coloc/ligilo" target="_blank">ligilo</a>
         </footer>
     </body>
 </html>

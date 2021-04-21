@@ -1,8 +1,8 @@
 # The URL the site will be built for
 base_url = "https://june.lacoloc.cafe"
 
-title = "linkRepo"
-description = "A place for my links"
+title = "ligilo"
+description = "One web page, to link them all"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
