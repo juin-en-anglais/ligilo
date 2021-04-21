@@ -1,6 +1,9 @@
 # The URL the site will be built for
 base_url = "https://june.lacoloc.cafe"
 
+title = "linkRepo"
+description = "A place for my links"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
@@ -14,3 +17,5 @@ highlight_code = false
 
 [extra]
 # Put all your custom variables here
+style = "dracula.css"
+avatar = "june.png"

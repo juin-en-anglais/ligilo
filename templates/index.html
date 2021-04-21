@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <title>{{ config.title }}</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="{{ config.extra.style }}">
+        <meta property="og:title" content="{{ config.title }}">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="{{ config.base_url }}/img/{{ config.extra.avatar }}">
+        <meta property="og:description" content="{{ config.description }}">
+        <meta property="og:site_name" content="{{ config.title }}">
+    </head>
+
+    <body>
+        
+        <img id="userPhoto" src="img/{{ config.extra.avatar }}" alt="User Photo">
+    
+        <a href="" id="userName">{{ section.title }}</a>
+        {% block toc %}
+        {% if section.toc %}
+        {% set toc = section.toc %}
+        {% elif page.toc %}
+        {% set toc = page.toc %}
+        {% endif %}
+        {% if toc %}
+        <div id="links">
+                {% for h2 in toc %}
+                {% if h2.children %}
+                {% for h3 in h2.children %}
+                    <a class="link" href="{{h3.title | safe}}" target="_blank">{{ h2.title }}</a>
+                {% endfor %}
+                {% endif %}
+                {% endfor %}
+        </div>
+        {% endif %}
+        {% endblock toc %}
+        
+        <footer>
+            Powered by <a href="https://getzola.org" target="_blank">Zola</a> / <a href="https://github.com/june-coloc/linkRepo" target="_blank">linkRepo</a>
+        </footer>
+    </body>
+</html>
